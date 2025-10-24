@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Оценка скина - Valorant Skins Rating</title>
+    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="stylesheet" href="../styles/skin-details.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">Valorant Skins Rating</div>
+                <nav>
+                    <ul>
+                        <li><a href="../index.html">Главная</a></li>
+                        <li><a href="../about.html">О проекте</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="skin-header">
+            <div class="skin-image">
+                <img id="skin-img" src="" alt="Skin Image">
+            </div>
+            <div class="skin-info">
+                <h1 id="skin-name"></h1>
+                <div class="skin-meta">
+                    <span id="skin-weapon"></span>
+                    <span id="skin-rarity"></span>
+                    <span id="skin-price"></span>
+                </div>
+                <div class="current-rating">
+                    <h3>Текущий рейтинг: <span id="average-rating">-</span>/90</h3>
+                    <div class="rating-stars" id="rating-stars"></div>
+                </div>
+            </div>
+        </div>
+
+        <section class="rating-section">
+            <h2>Оцените этот скин</h2>
+            <form id="rating-form" class="rating-form">
+                <div class="rating-criteria">
+                    <div class="criterion">
+                        <label>Визуальные эффекты</label>
+                        <div class="slider-container">
+                            <input type="range" min="0" max="10" value="5" class="criteria-slider" data-criterion="visuals">
+                            <span class="slider-value">5</span>
+                        </div>
+                    </div>
+                    
+                    <div class="criterion">
+                        <label>Анимации</label>
+                        <div class="slider-container">
+                            <input type="range" min="0" max="10" value="5" class="criteria-slider" data-criterion="animations">
+                            <span class="slider-value">5</span>
+                        </div>
+                    </div>
+                    
+                    <div class="criterion">
+                        <label>Звуковые эффекты</label>
+                        <div class="slider-container">
+                            <input type="range" min="0" max="10" value="5" class="criteria-slider" data-criterion="sounds">
+                            <span class="slider-value">5</span>
+                        </div>
+                    </div>
+                    
+                    <div class="criterion">
+                        <label>Соотношение цена/качество</label>
+                        <div class="slider-container">
+                            <input type="range" min="0" max="10" value="5" class="criteria-slider" data-criterion="value">
+                            <span class="slider-value">5</span>
+                        </div>
+                    </div>
+                    
+                    <div class="criterion">
+                        <label>Уникальность</label>
+                        <div class="slider-container">
+                            <input type="range" min="0" max="10" value="5" class="criteria-slider" data-criterion="uniqueness">
+                            <span class="slider-value">5</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="total-rating">
+                    <h3>Итоговая оценка: <span id="total-score">45</span>/90</h3>
+                    <div class="score-breakdown">
+                        <small>Сумма критериев: <span id="sum-score">25</span>/50 × 1.8</small>
+                    </div>
+                </div>
+
+                <div class="review-section">
+                    <h3>Развернутая рецензия</h3>
+                    <textarea 
+                        id="review-text" 
+                        placeholder="Опишите ваши впечатления от скина, его сильные и слабые стороны..."
+                        rows="6"
+                        minlength="50"
+                        maxlength="2000"
+                    ></textarea>
+                    <div class="char-count">
+                        <span id="char-counter">0</span>/2000 символов
+                    </div>
+                </div>
+
+                <button type="submit" class="submit-review-btn">Отправить на модерацию</button>
+            </form>
+        </section>
+
+        <section class="existing-reviews">
+            <h2>Одобренные рецензии</h2>
+            <div id="reviews-list" class="reviews-list">
+                <!-- Отзывы будут загружаться здесь -->
+            </div>
+        </section>
+    </main>
+
+    <script src="../js/firebase-config.js"></script>
+    <script src="../js/skin-details.js"></script>
+</body>
+</html>
