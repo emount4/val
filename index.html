@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valorant Skins Rating - Оценка скинов</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/collections.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">Valorant Skins Rating</div>
+                <nav>
+                    <ul>
+                        <li><a href="#" class="active">Главная</a></li>
+                        <li><a href="#">Коллекции</a></li>
+                        <li><a href="#">Рейтинги</a></li>
+                        <li><a href="about.html">О проекте</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="hero">
+            <h1>Оценка скинов Valorant</h1>
+            <p>Изучите коллекции скинов, оценивайте их и делитесь своим мнением с сообществом. Найдите лучшие скины для своего арсенала.</p>
+        </section>
+
+        <section class="filters">
+            <div class="filter-group">
+                <label for="weapon-filter">Оружие:</label>
+                <select id="weapon-filter">
+                    <option value="all">Все</option>
+                    <option value="vandal">Vandal</option>
+                    <option value="phantom">Phantom</option>
+                    <option value="operator">Operator</option>
+                    <option value="classic">Classic</option>
+                </select>
+            </div>
+            <div class="filter-group">
+                <label for="rarity-filter">Редкость:</label>
+                <select id="rarity-filter">
+                    <option value="all">Все</option>
+                    <option value="select">Select</option>
+                    <option value="deluxe">Deluxe</option>
+                    <option value="premium">Premium</option>
+                    <option value="ultra">Ultra</option>
+                </select>
+            </div>
+            <button id="reset-filters">Сбросить фильтры</button>
+        </section>
+
+        <section class="collections-grid" id="collections-container">
+            <!-- Коллекции будут добавляться с помощью JavaScript -->
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-links">
+                    <a href="#">Главная</a>
+                    <a href="#">Коллекции</a>
+                    <a href="#">Рейтинги</a>
+                    <a href="#">О проекте</a>
+                    <a href="#">Политика конфиденциальности</a>
+                </div>
+                <div class="copyright">
+                    © 2023 Valorant Skins Rating. Данный сайт не связан с Riot Games. Все права на Valorant принадлежат Riot Games.
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
