@@ -1,0 +1,274 @@
+.skin-header {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 30px;
+    margin-bottom: 40px;
+    background: #1a242f;
+    padding: 25px;
+    border-radius: 10px;
+}
+
+.skin-image img {
+    width: 100%;
+    border-radius: 8px;
+    border: 2px solid #ff4655;
+}
+
+.skin-info h1 {
+    color: #ff4655;
+    margin-bottom: 15px;
+    font-size: 28px;
+}
+
+.skin-meta {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.skin-meta span {
+    background: #0f1923;
+    padding: 5px 12px;
+    border-radius: 15px;
+    font-size: 14px;
+    border: 1px solid #2a3a4a;
+}
+
+.current-rating {
+    background: #0f1923;
+    padding: 20px;
+    border-radius: 8px;
+    border-left: 4px solid #ff4655;
+}
+
+.rating-section {
+    background: #1a242f;
+    padding: 30px;
+    border-radius: 10px;
+    margin-bottom: 40px;
+}
+
+.rating-criteria {
+    margin-bottom: 30px;
+}
+
+.criterion {
+    margin-bottom: 25px;
+    padding: 15px;
+    background: #0f1923;
+    border-radius: 8px;
+}
+
+.criterion label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: 600;
+    color: #ece8e1;
+}
+
+.slider-container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.criteria-slider {
+    flex: 1;
+    height: 6px;
+    background: #2a3a4a;
+    border-radius: 3px;
+    outline: none;
+    -webkit-appearance: none;
+}
+
+.criteria-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 20px;
+    height: 20px;
+    background: #ff4655;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.slider-value {
+    min-width: 30px;
+    text-align: center;
+    font-weight: bold;
+    color: #ff4655;
+}
+
+.total-rating {
+    background: #0f1923;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    margin-bottom: 30px;
+    border: 2px solid #ff4655;
+}
+
+#total-score {
+    font-size: 32px;
+    color: #ff4655;
+    font-weight: bold;
+}
+
+.score-breakdown {
+    margin-top: 10px;
+    color: #b8b3ad;
+}
+
+.review-section {
+    margin-bottom: 25px;
+}
+
+#review-text {
+    width: 100%;
+    padding: 15px;
+    background: #0f1923;
+    border: 1px solid #2a3a4a;
+    border-radius: 8px;
+    color: #ece8e1;
+    font-size: 16px;
+    resize: vertical;
+}
+
+#review-text:focus {
+    outline: none;
+    border-color: #ff4655;
+}
+
+.char-count {
+    text-align: right;
+    color: #b8b3ad;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+.char-count.warning {
+    color: #ffa500;
+}
+
+.char-count.error {
+    color: #ff4655;
+}
+
+.submit-review-btn {
+    width: 100%;
+    padding: 15px;
+    background: #ff4655;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.submit-review-btn:hover:not(:disabled) {
+    background: #e63e4d;
+}
+
+.submit-review-btn:disabled {
+    background: #7a7a7a;
+    cursor: not-allowed;
+}
+
+.existing-reviews {
+    margin-top: 40px;
+}
+
+.review-card {
+    background: #1a242f;
+    padding: 25px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    border-left: 4px solid #ff4655;
+}
+
+.review-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.review-rating {
+    background: #ff4655;
+    color: white;
+    padding: 5px 12px;
+    border-radius: 15px;
+    font-weight: bold;
+}
+
+.review-criteria {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 10px;
+    margin-bottom: 15px;
+    font-size: 14px;
+    color: #b8b3ad;
+}
+
+.review-text {
+    line-height: 1.6;
+    color: #ece8e1;
+    margin-bottom: 15px;
+}
+
+.review-date {
+    text-align: right;
+    color: #7a7a7a;
+    font-size: 14px;
+}
+
+.no-reviews {
+    text-align: center;
+    color: #b8b3ad;
+    padding: 40px;
+    background: #1a242f;
+    border-radius: 10px;
+}
+
+/* Анимации */
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.review-card {
+    animation: slideIn 0.3s ease-out;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .skin-header {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    
+    .skin-meta {
+        justify-content: center;
+    }
+    
+    .rating-section {
+        padding: 20px;
+    }
+    
+    .slider-container {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 10px;
+    }
+    
+    .review-criteria {
+        grid-template-columns: 1fr;
+    }
+}
