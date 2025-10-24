@@ -79,7 +79,7 @@
     background: #2a3a4a;
     border-radius: 3px;
     outline: none;
-    -webkit-appearance: none;
+    /* -webkit-appearance: none; */
 }
 
 .criteria-slider::-webkit-slider-thumb {
